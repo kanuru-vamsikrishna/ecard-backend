@@ -1,0 +1,304 @@
+{
+	"info": {
+		"_postman_id": "ae3a09e3-a2c4-4163-99c7-95a67b8b229d",
+		"name": "ECARD",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\" : \"user1\",\r\n    \"email\" : \"user1@gmail.com\",\r\n    \"password\" : \"99494661\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9999/user/register",
+							"host": [
+								"localhost"
+							],
+							"port": "9999",
+							"path": [
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"user1@gmail.com\",\r\n    \"password\" : \"99494661\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9999/user/login",
+							"host": [
+								"localhost"
+							],
+							"port": "9999",
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Account",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-auth",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWRkNTliOWUyNzZjN2UzMDlhNzE4YmUiLCJ1c2VybmFtZSI6InVzZXIxIiwiZW1haWwiOiJ1c2VyMUBnbWFpbC5jb20iLCJjcmVhdGVkQXQiOjE2NDE4OTY2Mjc2NDAsImlhdCI6MTY0MTg5NjYyN30.Eor8Ib55hJoRVvFMDXyIRM7mt9y-YyhKhtbsSQmPnTE",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:9999/user/account",
+							"host": [
+								"localhost"
+							],
+							"port": "9999",
+							"path": [
+								"user",
+								"account"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-auth",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWRkNTliOWUyNzZjN2UzMDlhNzE4YmUiLCJ1c2VybmFtZSI6InVzZXIxIiwiZW1haWwiOiJ1c2VyMUBnbWFpbC5jb20iLCJjcmVhdGVkQXQiOjE2NDE4OTY2Mjc2NDAsImlhdCI6MTY0MTg5NjYyN30.Eor8Ib55hJoRVvFMDXyIRM7mt9y-YyhKhtbsSQmPnTE",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9999/user/logout",
+							"host": [
+								"localhost"
+							],
+							"port": "9999",
+							"path": [
+								"user",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "candidate",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-auth",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWRkNTliOWUyNzZjN2UzMDlhNzE4YmUiLCJ1c2VybmFtZSI6InVzZXIxIiwiZW1haWwiOiJ1c2VyMUBnbWFpbC5jb20iLCJjcmVhdGVkQXQiOjE2NDE4OTY1NTQwMjgsImlhdCI6MTY0MTg5NjU1NH0.aeF-f8sUqcpRfTeP4BYiIqx8KfRoob4dt_R1sugEkQg",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"suresh\",\r\n    \"age\"  : \"21\",\r\n    \"gender\" : \"Male\",\r\n    \"highestQualification\" : \"B-tech\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9999/candidate/register",
+							"host": [
+								"localhost"
+							],
+							"port": "9999",
+							"path": [
+								"candidate",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-auth",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWRkNTliOWUyNzZjN2UzMDlhNzE4YmUiLCJ1c2VybmFtZSI6InVzZXIxIiwiZW1haWwiOiJ1c2VyMUBnbWFpbC5jb20iLCJjcmVhdGVkQXQiOjE2NDE4OTY1NTQwMjgsImlhdCI6MTY0MTg5NjU1NH0.aeF-f8sUqcpRfTeP4BYiIqx8KfRoob4dt_R1sugEkQg",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "localhost:9999/candidate/list",
+							"host": [
+								"localhost"
+							],
+							"port": "9999",
+							"path": [
+								"candidate",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Based on Id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-auth",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWRkNTliOWUyNzZjN2UzMDlhNzE4YmUiLCJ1c2VybmFtZSI6InVzZXIxIiwiZW1haWwiOiJ1c2VyMUBnbWFpbC5jb20iLCJjcmVhdGVkQXQiOjE2NDE4OTY1NTQwMjgsImlhdCI6MTY0MTg5NjU1NH0.aeF-f8sUqcpRfTeP4BYiIqx8KfRoob4dt_R1sugEkQg",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "localhost:9999/candidate/61dd7b739521722e9c6fd79d",
+							"host": [
+								"localhost"
+							],
+							"port": "9999",
+							"path": [
+								"candidate",
+								"61dd7b739521722e9c6fd79d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-auth",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWRkNTliOWUyNzZjN2UzMDlhNzE4YmUiLCJ1c2VybmFtZSI6InVzZXIxIiwiZW1haWwiOiJ1c2VyMUBnbWFpbC5jb20iLCJjcmVhdGVkQXQiOjE2NDE4OTY1NTQwMjgsImlhdCI6MTY0MTg5NjU1NH0.aeF-f8sUqcpRfTeP4BYiIqx8KfRoob4dt_R1sugEkQg",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"age\" : \"24\",\r\n    \"highestQualification\" : \"MBA\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9999/candidate/61dd7b739521722e9c6fd79d",
+							"host": [
+								"localhost"
+							],
+							"port": "9999",
+							"path": [
+								"candidate",
+								"61dd7b739521722e9c6fd79d"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Photos",
+			"item": [
+				{
+					"name": "Profile Image",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-auth",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWRkNTliOWUyNzZjN2UzMDlhNzE4YmUiLCJ1c2VybmFtZSI6InVzZXIxIiwiZW1haWwiOiJ1c2VyMUBnbWFpbC5jb20iLCJjcmVhdGVkQXQiOjE2NDE4OTY1NTQwMjgsImlhdCI6MTY0MTg5NjU1NH0.aeF-f8sUqcpRfTeP4BYiIqx8KfRoob4dt_R1sugEkQg",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/Personal/Pictures/image1.jpg"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9999/candidate/images",
+							"host": [
+								"localhost"
+							],
+							"port": "9999",
+							"path": [
+								"candidate",
+								"images"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
