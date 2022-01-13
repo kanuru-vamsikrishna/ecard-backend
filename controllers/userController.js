@@ -26,7 +26,7 @@ module.exports.Login = (req, res) => {
   const body = req.body;
   User.findByCredentials(body.email, body.password)
     .then((user) => {
-      console.log(user, "user");
+      // console.log(user, "user");
       return user.generateToken();
     })
     .then((token) => {
